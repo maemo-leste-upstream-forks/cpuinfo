@@ -1,0 +1,15 @@
+set upstream ABI version as 0
+Author: Mo Zhou
+Forward: no need
+Index: cpuinfo/CMakeLists.txt
+===================================================================
+--- cpuinfo.orig/CMakeLists.txt
++++ cpuinfo/CMakeLists.txt
+@@ -203,6 +203,7 @@ IF(CPUINFO_LIBRARY_TYPE STREQUAL "defaul
+   ADD_LIBRARY(cpuinfo ${CPUINFO_SRCS})
+ ELSEIF(CPUINFO_LIBRARY_TYPE STREQUAL "shared")
+   ADD_LIBRARY(cpuinfo SHARED ${CPUINFO_SRCS})
++  set_target_properties(cpuinfo PROPERTIES SOVERSION 0)
+ ELSEIF(CPUINFO_LIBRARY_TYPE STREQUAL "static")
+   ADD_LIBRARY(cpuinfo STATIC ${CPUINFO_SRCS})
+ ELSE()

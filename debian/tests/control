@@ -1,0 +1,11 @@
+Test-Command: /usr/bin/cache-info
+Restrictions: allow-stderr
+
+Test-Command: /usr/bin/cpu-info
+Restrictions: allow-stderr
+
+Test-Command: /usr/bin/cpuid-dump
+Restrictions: allow-stderr
+
+Test-Command: /usr/bin/isa-info
+Restrictions: allow-stderr

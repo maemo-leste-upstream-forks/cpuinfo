@@ -1,0 +1,101 @@
+cpuinfo (0.0~git20230113.5fd22ca) unstable; urgency=medium
+
+  * Update to latest git
+
+ -- Sander <code@kroket.io>  Sat, 14 Jan 2023 13:28:03 +0800
+
+cpuinfo (0.0~git20200612.63b2545-2) unstable; urgency=medium
+
+  * Allow building libcpuinfo{0,-dev} on other architectures.
+  * Change maintainer to Deep Learning Team <debian-ai@l.d.o>.
+  * Please pin to this upstream snapshot for PyTorch 1.7.0.
+
+ -- Mo Zhou <lumin@debian.org>  Thu, 29 Oct 2020 13:28:03 +0800
+
+cpuinfo (0.0~git20200612.63b2545-1) unstable; urgency=medium
+
+  * New upstream version 0.0~git20200612.63b2545
+  * Refresh symbols control file (+1 new symbol)
+
+ -- Mo Zhou <lumin@debian.org>  Mon, 31 Aug 2020 10:14:21 +0800
+
+cpuinfo (0.0~git20200422.a1e0b95-2) unstable; urgency=medium
+
+  * Install libclog.a and clog.h in libcpuinfo-dev,
+    as clog is used by too many reverse dependencies.
+  * Bump debhelper compat level to 13.
+  * Apply wrap-and-sort.
+
+ -- Mo Zhou <lumin@debian.org>  Thu, 30 Apr 2020 23:05:06 +0800
+
+cpuinfo (0.0~git20200422.a1e0b95-1) unstable; urgency=medium
+
+  * New upstream version 0.0~git20200422.a1e0b95
+  * Incorporate upstream LICENSE updates to d/copyright.
+  * Update my mail address in control and d/copyright.
+  * Bump Standards-Version to 4.5.0 (no change).
+  * Specify Rules-Requires-Root: no.
+  * Specify Build-Depends-Package in symbols control file.
+  * Refresh symbols control file (new symbols)
+  * B-D on debhelper-compat (= 12) and deprecate d/compat.
+
+ -- Mo Zhou <lumin@debian.org>  Thu, 23 Apr 2020 13:35:55 +0800
+
+cpuinfo (0.0~git20190201.d5e37ad-2) unstable; urgency=medium
+
+  [ Rafael David Tinoco ]
+  * debian/rules: Set CPUINFO_LOG_LEVEL to error only (LP: #1840847)
+
+ -- Mo Zhou <cdluminate@gmail.com>  Thu, 22 Aug 2019 07:01:35 +0000
+
+cpuinfo (0.0~git20190201.d5e37ad-1) unstable; urgency=medium
+
+  * New upstream version 0.0~git20190201.d5e37ad
+  * Remove add-binaries-install.patch, merged upstream.
+
+ -- Mo Zhou <cdluminate@gmail.com>  Mon, 04 Feb 2019 06:36:46 +0000
+
+cpuinfo (0.0~git20190118.da0a91b-1) unstable; urgency=medium
+
+  [ Alexander GQ Gerasiov ]
+  * Add debian/patches/add-binaries-install.patch instead of
+    arch-specific cpuinfo.install files.
+  * d/control: Limit Architecture with only supported ones.
+
+  [ Mo Zhou ]
+  * New upstream version 0.0~git20190118.da0a91b
+
+ -- Mo Zhou <cdluminate@gmail.com>  Wed, 30 Jan 2019 02:02:25 +0000
+
+cpuinfo (0.0~git20181227.2d2bfa4-1) unstable; urgency=medium
+
+  * New upstream version 0.0~git20181227.2d2bfa4
+  * Bump Standards-Version to 4.3.0 (no change).
+  * Bump debhelper compat to 12.
+
+ -- Mo Zhou <cdluminate@gmail.com>  Sat, 12 Jan 2019 05:33:49 +0000
+
+cpuinfo (0.0~git20181219.a974884-2) unstable; urgency=medium
+
+  * Allow output to stderr during autopkgtest.
+  * Change default log level to "warning" to make the library quiet.
+    (Closes: #918177)
+
+ -- Mo Zhou <cdluminate@gmail.com>  Sat, 05 Jan 2019 02:01:09 +0000
+
+cpuinfo (0.0~git20181219.a974884-1) unstable; urgency=medium
+
+  * New upstream version 0.0~git20181219.a974884
+  * Fix FTBFS on i386, due to missing shared object in ld's path.
+  * Fix FTBFS on arm* because files to be installed diverges from x86.
+  * Add watch file to monitor upstream git HEAD.
+  * Refresh symbols control file.
+  * Dump cpu information before running tests, for debugging purpose.
+
+ -- Mo Zhou <cdluminate@gmail.com>  Wed, 19 Dec 2018 12:09:13 +0000
+
+cpuinfo (0.0~git20181113.3bf2c72-1) unstable; urgency=low
+
+  * Initial release. (Closes: #915979)
+
+ -- Mo Zhou <cdluminate@gmail.com>  Sun, 09 Dec 2018 06:03:10 +0000

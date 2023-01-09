@@ -1,0 +1,23 @@
+#!/usr/bin/make -f
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+
+%:
+	dh $@ -Scmake
+
+override_dh_auto_configure:
+	dh_auto_configure -- \
+		-DGOOGLETEST_SOURCE_DIR=/usr/src/googletest/ \
+		-DCPUINFO_BUILD_BENCHMARKS=OFF \
+		-DCPUINFO_LIBRARY_TYPE=shared \
+		-DCPUINFO_LOG_LEVEL=error \
+		-DCMAKE_SKIP_RPATH=ON
+
+override_dh_auto_test:
+ifeq (,$(filter nocheck,$(DEB_BUILD_OPTIONS)))
+	if [ -r /proc/cpuinfo ]; then cat /proc/cpuinfo ; else false; fi
+	if [ -x ./$(shell ls -d obj-*)/cpuid-dump ]; then ./$(shell ls -d obj-*)/cpuid-dump; fi
+	LD_LIBRARY_PATH=$(shell pwd)/$(shell ls -d obj-*) dh_auto_test
+endif
+
+override_dh_missing:
+	dh_missing --list-missing

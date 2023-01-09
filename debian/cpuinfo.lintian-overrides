@@ -1,0 +1,4 @@
+binary-without-manpage usr/bin/cache-info
+binary-without-manpage usr/bin/cpu-info
+binary-without-manpage usr/bin/cpuid-dump
+binary-without-manpage usr/bin/isa-info

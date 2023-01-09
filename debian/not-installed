@@ -1,0 +1,12 @@
+usr/include/gtest
+usr/include/gmock
+usr/lib/*/libgmock*
+usr/lib/*/libgtest*
+usr/lib/*/pkgconfig/gmock.pc
+usr/lib/*/pkgconfig/gmock_main.pc
+usr/lib/*/pkgconfig/gtest_main.pc
+usr/lib/*/pkgconfig/gtest.pc
+usr/lib/*/cmake/GTest/GTestConfig.cmake
+usr/lib/*/cmake/GTest/GTestConfigVersion.cmake
+usr/lib/*/cmake/GTest/GTestTargets.cmake exists 
+usr/lib/*/cmake/GTest/GTestTargets-none.cmake

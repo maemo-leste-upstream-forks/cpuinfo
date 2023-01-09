@@ -1,0 +1,130 @@
+Source: cpuinfo
+Section: science
+Homepage: https://github.com/pytorch/cpuinfo
+Priority: optional
+Standards-Version: 4.5.0
+Vcs-Git: https://salsa.debian.org/deeplearning-team/cpuinfo.git
+Vcs-Browser: https://salsa.debian.org/deeplearning-team/cpuinfo
+Maintainer: Debian Deep Learning Team <debian-ai@lists.debian.org>
+Uploaders: Mo Zhou <lumin@debian.org>
+Build-Depends: cmake, debhelper-compat (= 13), googletest
+Rules-Requires-Root: no
+
+Package: cpuinfo
+Architecture: amd64 arm64 armel armhf i386 x32
+Multi-Arch: no
+Depends: libcpuinfo0 (= ${binary:Version}), ${misc:Depends}, ${shlibs:Depends}
+Description: CPU INFOrmation library (binary utilities)
+ cpuinfo is a library to detect essential for performance optimization
+ information about host CPU.
+ .
+ Features
+ .
+   - **Cross-platform** availability:
+     - Linux, Windows, macOS, Android, and iOS operating systems
+     - x86, x86-64, ARM, and ARM64 architectures
+   - Modern **C/C++ interface**
+     - Thread-safe
+     - No memory allocation after initialization
+     - No exceptions thrown
+   - Detection of **supported instruction sets**, up to AVX512 (x86) and
+     ARMv8.3 extensions
+   - Detection of SoC and core information:
+     - **Processor (SoC) name**
+     - Integrated **GPU name** (Android/iOS only)
+     - Vendor, **microarchitecture**, and ID (**MIDR** on ARM, **CPUID**
+       leaf 1 EAX value on x86) for each CPU core
+   - Detection of **cache information**:
+     - Cache type (instruction/data/unified), size and line size
+     - Cache associativity
+     - Cores and logical processors (hyper-threads) sharing the cache
+   - Detection of **topology information** (relative between logical
+     processors, cores, and processor packages)
+   - Well-tested **production-quality** code:
+     - 60+ mock tests based on data from real devices
+     - Includes work-arounds for common bugs in hardware and OS kernels
+     - Supports systems with heterogenous cores, such as **big.LITTLE**
+       and Max.Med.Min
+   - Permissive **open-source** license (Simplified BSD)
+ .
+ This package ships with several binary utilities.
+
+Package: libcpuinfo-dev
+Section: libdevel
+Architecture: any
+Multi-Arch: same
+Depends: libcpuinfo0 (= ${binary:Version}), ${misc:Depends}, ${shlibs:Depends}
+Description: CPU INFOrmation library (header file)
+ cpuinfo is a library to detect essential for performance optimization
+ information about host CPU.
+ .
+ Features
+ .
+   - **Cross-platform** availability:
+     - Linux, Windows, macOS, Android, and iOS operating systems
+     - x86, x86-64, ARM, and ARM64 architectures
+   - Modern **C/C++ interface**
+     - Thread-safe
+     - No memory allocation after initialization
+     - No exceptions thrown
+   - Detection of **supported instruction sets**, up to AVX512 (x86) and
+     ARMv8.3 extensions
+   - Detection of SoC and core information:
+     - **Processor (SoC) name**
+     - Integrated **GPU name** (Android/iOS only)
+     - Vendor, **microarchitecture**, and ID (**MIDR** on ARM, **CPUID**
+       leaf 1 EAX value on x86) for each CPU core
+   - Detection of **cache information**:
+     - Cache type (instruction/data/unified), size and line size
+     - Cache associativity
+     - Cores and logical processors (hyper-threads) sharing the cache
+   - Detection of **topology information** (relative between logical
+     processors, cores, and processor packages)
+   - Well-tested **production-quality** code:
+     - 60+ mock tests based on data from real devices
+     - Includes work-arounds for common bugs in hardware and OS kernels
+     - Supports systems with heterogenous cores, such as **big.LITTLE**
+       and Max.Med.Min
+   - Permissive **open-source** license (Simplified BSD)
+ .
+ This package ships with the header file.
+
+Package: libcpuinfo0
+Section: libs
+Architecture: any
+Multi-Arch: same
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: CPU INFOrmation library (shared object)
+ cpuinfo is a library to detect essential for performance optimization
+ information about host CPU.
+ .
+ Features
+ .
+   - **Cross-platform** availability:
+     - Linux, Windows, macOS, Android, and iOS operating systems
+     - x86, x86-64, ARM, and ARM64 architectures
+   - Modern **C/C++ interface**
+     - Thread-safe
+     - No memory allocation after initialization
+     - No exceptions thrown
+   - Detection of **supported instruction sets**, up to AVX512 (x86) and
+     ARMv8.3 extensions
+   - Detection of SoC and core information:
+     - **Processor (SoC) name**
+     - Integrated **GPU name** (Android/iOS only)
+     - Vendor, **microarchitecture**, and ID (**MIDR** on ARM, **CPUID**
+       leaf 1 EAX value on x86) for each CPU core
+   - Detection of **cache information**:
+     - Cache type (instruction/data/unified), size and line size
+     - Cache associativity
+     - Cores and logical processors (hyper-threads) sharing the cache
+   - Detection of **topology information** (relative between logical
+     processors, cores, and processor packages)
+   - Well-tested **production-quality** code:
+     - 60+ mock tests based on data from real devices
+     - Includes work-arounds for common bugs in hardware and OS kernels
+     - Supports systems with heterogenous cores, such as **big.LITTLE**
+       and Max.Med.Min
+   - Permissive **open-source** license (Simplified BSD)
+ .
+ This package ships with the shared object.
