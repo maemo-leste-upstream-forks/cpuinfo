@@ -2,3 +2,4 @@ usr/include/clog.h
 usr/include/cpuinfo.h
 usr/lib/*/libclog.a
 usr/lib/*/libcpuinfo.so
+usr/share/cpuinfo/*.cmake
